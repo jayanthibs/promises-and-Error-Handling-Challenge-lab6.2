@@ -36,7 +36,7 @@ export function fetchProductReviews(id) {
         return;
       }
 
-      if (Math.random() < 0.9) {
+      if (Math.random() < 0.8) {
         const reviews = [
           { productId: 1, rating: 5, content: "It was a nice Laptop!" },
           { productId: 1, rating: 3, content: "Bad Laptop! Broke!" },
@@ -59,7 +59,7 @@ export function fetchProductReviews(id) {
 export function fetchSalesReport() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (Math.random() < 0.2) {
+      if (Math.random() < 0.9) {
         resolve({ totalSales: 25000, unitsSold: 50, averagePrice: 500 });
       } else {
         reject(new NetworkError("Failed to fetch sales report"));
